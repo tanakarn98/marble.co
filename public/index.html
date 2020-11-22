@@ -20,9 +20,18 @@
     </script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
   </head>
+
   <body>
     <img src="./images/bgClouds.png"  class='bgClouds'></img>
     <img src="./images/topImages.png" class='topImage'></img>
+
+    <a href="mailto:hello@marble-co.net?body=氏名、参加希望のワークショップ、参加人数をご記入の上送信してください。%0D%0A %0D%0A【氏名】%0D%0A【参加希望ワークショップ】%0D%0A【参加人数】%0D%0A %0D%0A 複数のワークショップに参加されたい場合は以下に同じ形式で続けてください。"><div class='alwaysTopRight'>
+      <p>お申し込み</p> 
+      <i class="fas fa-envelope"></i> 
+    </div></a>
+
+    <div class='scroll'><p>スクロール</p><img src='./images/arrow.png'></img></div>
+
     <a href="mailto:hello@marble-co.net?body=氏名、参加希望のワークショップ、参加人数をご記入の上送信してください。%0D%0A %0D%0A【氏名】%0D%0A【参加希望ワークショップ】%0D%0A【参加人数】%0D%0A %0D%0A 複数のワークショップに参加されたい場合は以下に同じ形式で続けてください。"><button class='apply'><i class="fas fa-envelope"></i>お申し込み</button></a>
     <h2 class='aboutTitle'>こんにちは、<img src='./images/Marbleco_logo.png'></img>です。</h2>
     <div class='aboutFlex container'>
@@ -121,9 +130,9 @@
 
     <div class='titleContainer'><p class='title'>お問い合わせ / お申し込み</p></div>
     <div class='contact'>
-    <h4>Marble.co</h4>
-    <a href='tel:000-1234-5678'><p><i class="fas fa-phone"></i>075-451-8765</p></a><br>
-    <a href='mailto:hello@marble-co.net'><p><i class="fas fa-envelope"></i>hello@marble-co.net</p></a>
+      <h4>Marble.co</h4>
+      <a href='tel:000-1234-5678'><p><i class="fas fa-phone"></i>075-451-8765</p></a><br>
+      <a href='mailto:hello@marble-co.net'><p><i class="fas fa-envelope"></i>hello@marble-co.net</p></a>
     </div>
     </div>
     <img src='./images/bottomSnow.png' class='footerImage'></img>
@@ -148,6 +157,12 @@
           behavior: 'smooth',
         });
       });
+    }
+    const scroll = window.pageYOffset;
+    if(scroll === 0){
+      const arrow = document.getElementsByClassName('scroll')
+      arrow.classList.add('display');
+      console.log("0!!!");
     }
   </script>
   
