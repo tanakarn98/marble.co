@@ -4,7 +4,6 @@ body {
   background-color: #f2f0e7;
   font-family: heisei-kaku-gothic-std, sans-serif;
   color: #006899;
-  /* overflow-x: hidden; */
 }
 h1,
 h2,
@@ -39,6 +38,7 @@ p {
   display: none;
 }
 .alwaysTopRight {
+  z-index: 10000;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -252,7 +252,17 @@ p {
   background-color: #dbbc3a;
   top: -30px;
   left: 50%;
+  position: relative;
 }
+.kaibo2 img {
+  position: absolute;
+  top: -150px;
+  right: -80px;
+  width: 150px !important;
+  object-fit: contain !important;
+  transform: rotate(20deg);
+}
+
 .workShops a {
   display: block;
   margin: 0 auto;
