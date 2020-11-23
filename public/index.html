@@ -7,7 +7,7 @@
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
-      content="Web site created using create-react-app"
+      content="【2020.12.25開催】マーブルデザインワークショップを開催！"
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
@@ -15,39 +15,10 @@
       href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@700;900&display=swap"
       rel="stylesheet"
     />
+    <meta property="og:image" content="https://i.imgur.com/c0mnxAZ.png" />
+    <meta name="twitter:card" content="summary_card" />
     <title>マーブルデザインワークショップ 2020.12.25</title>
-    <script>
-      //font-weight :700&300
-      (function (d) {
-        var config = {
-            kitId: "ycx6juc",
-            scriptTimeout: 3000,
-            async: true,
-          },
-          h = d.documentElement,
-          t = setTimeout(function () {
-            h.className =
-              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
-          }, config.scriptTimeout),
-          tk = d.createElement("script"),
-          f = false,
-          s = d.getElementsByTagName("script")[0],
-          a;
-        h.className += " wf-loading";
-        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
-        tk.async = true;
-        tk.onload = tk.onreadystatechange = function () {
-          a = this.readyState;
-          if (f || (a && a != "complete" && a != "loaded")) return;
-          f = true;
-          clearTimeout(t);
-          try {
-            Typekit.load(config);
-          } catch (e) {}
-        };
-        s.parentNode.insertBefore(tk, s);
-      })(document);
-    </script>
+
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
@@ -56,7 +27,17 @@
     />
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <script>
+      var userAgent = window.navigator.userAgent.toLowerCase();
+      if (
+        userAgent.indexOf("msie") !== -1 ||
+        userAgent.indexOf("trident") !== -1
+      ) {
+        document.getElementById("root").innerHTML =
+          "<div style='margin:0 auto'><p style='text-align:center'>お使いのブラウザには対応していません<span role='img' aria-label='sad face'>&#x1f622;</span></p></div>";
+      }
+    </script>
+    <noscript>JavaScriptを有効にしてください。</noscript>
     <div id="root"></div>
     <!--
       This HTML file is a template.
